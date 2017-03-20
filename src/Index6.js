@@ -50,9 +50,9 @@ class Index6 extends React.Component {
         sdescription: this.state.sdescription,
         date:this.state.date
       })
-    })
-    alert("new survey created");
-
+    }).then(response => {
+        if(200 == response.status){
+          alert("entry added")}})
 
 
   }
