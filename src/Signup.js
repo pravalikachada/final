@@ -98,8 +98,18 @@ flag=0;
           upwd:pwd.value,
 
         })
-      }).then(alert('Successful registation!!you can login now!!')
-    )
+      }).then(response => {
+        console.log(response.status);
+        if(500==response.status)
+        {
+          alert("username already exists!!please chose a new one!!");
+        }
+        else if(200==response.status)
+        {
+          alert("succesfully registered!!you can Login now!");
+        }
+      })
+
   }
 
 
